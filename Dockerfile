@@ -1,3 +1,3 @@
 FROM php:7.2-apache
 RUN docker-php-ext-install pdo_mysql
-COPY html/ /var/www/html/
+COPY src/ /var/www/html/

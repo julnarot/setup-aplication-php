@@ -2,7 +2,7 @@
 
 <?php
 echo "Raul Jonatan";
-$servername = "db";
+$servername = "setup_db";
 $username = "myUser";
 $password = "myUser";
 $dbname = "mydb";
