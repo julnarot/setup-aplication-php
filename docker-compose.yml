@@ -22,6 +22,16 @@ services:
       MYSQL_DATABASE: mydb
       MYSQL_USER: myUser
       MYSQL_PASSWORD: myUser
+  phpmyadmin:
+    depends_on:
+      - setup_db
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - 8088:80
+    environment:
+      PMA_HOST: setup_db
+      MYSQL_ROOT_PASSWORD: myUserPass
 
 volumes:
   html: {}
