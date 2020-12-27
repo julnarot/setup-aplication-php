@@ -15,13 +15,14 @@ services:
       - ./config:/usr/local/etc/php
   setup_db:
     image: mysql:5.7
-
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: myUserPass
       MYSQL_DATABASE: mydb
       MYSQL_USER: myUser
       MYSQL_PASSWORD: myUser
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
   phpmyadmin:
     depends_on:
       - setup_db

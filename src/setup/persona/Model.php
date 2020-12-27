@@ -23,7 +23,7 @@ class Model
     }
     public function get_personas(){
 
-        $consulta = $this->db->query("select * from personas");
+        $consulta = $this->db->query("select * from person");
         $data = $consulta->fetchAll(PDO::FETCH_OBJ);
 
 //        var_export($data[0]);
